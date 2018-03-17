@@ -26,7 +26,7 @@ dubbox:
     password: admin
 
 druid:
-    url: jdbc:mysql://localhost:3306/xbin_store?characterEncoding=utf-8
+    url: jdbc:mysql://localhost:3306/user_db?characterEncoding=utf-8
     driver-class: com.mysql.jdbc.Driver
     username: root
     password: OZo+t9QET+ctzd5Esn9q0GJP5hXtWWIKEsX8c4/w6z4C4AnxrwpvySNgBS89XdazOavjXXZp0oeZtQ3P9lLGEA==
