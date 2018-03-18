@@ -6,13 +6,13 @@ dubbox:
     owner: binux
   registry: 
     protocol: zookeeper
-    address: 192.168.125.128:2181
+    address: 127.0.0.1:2181
   annotation:
     package: cn.binux.order
   protocol:
     name: dubbo
     port: 20888
-    host: 192.168.125.1
+    host: 127.0.0.1
     timeout: 30000
     threadpool: fixed
     threads: 500
@@ -21,15 +21,15 @@ dubbox:
     optimizer: cn.binux.serial.SerializationOptimizerImpl
   monitor:
     enabled: false
-    address: 192.168.125.1:6060
+    address: 127.0.0.1:6060
     username: admin
     password: admin
 
 druid:
-    url: jdbc:mysql://localhost:3306/user_db?characterEncoding=utf-8
+    url: jdbc:mysql://47.93.243.203:3306/user_db?characterEncoding=utf-8
     driver-class: com.mysql.jdbc.Driver
     username: root
-    password: OZo+t9QET+ctzd5Esn9q0GJP5hXtWWIKEsX8c4/w6z4C4AnxrwpvySNgBS89XdazOavjXXZp0oeZtQ3P9lLGEA==
+    password: hufeng
     initial-size: 1
     min-idle: 1
     max-active: 20
@@ -43,13 +43,13 @@ druid:
     pool-prepared-statements: false
     max-pool-prepared-statement-per-connection-size: 20
     filters: stat,wall,log4j,config
-    connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000;config.decrypt=true
+    connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000;config.decrypt=false
     monitor:
           enabled: false
           druid-stat-view: /druid/*
           druid-web-stat-filter: /*
           allow: 219.230.50.107,127.0.0.1
-          deny: 192.168.1.73
+          deny: 127.0.0.1
           login-username: admin
           login-password: 123456
           exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
